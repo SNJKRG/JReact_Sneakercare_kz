@@ -2,7 +2,7 @@
     margin: 0px;
     background-color: #F5F5F5;
     font-family: Inter;  
-    height: 100vh;  
+    height: 100vh; 
 }
 
 .sub-container{
@@ -118,6 +118,11 @@
     color: #FA8F21;
     margin-top: 1rem;
     font-weight: 500;
+}
+
+.footer-container{
+    height: 50vh;
+    background-color: #F5F5F5;
 }
 
 .footer{
