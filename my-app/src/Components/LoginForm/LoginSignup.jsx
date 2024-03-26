@@ -8,14 +8,13 @@ import imgwhats from "./Icons/Whatsapp.svg"
 import imgtg from "./Icons/Telegram.svg"
 import imglinkedin from "./Icons/Linkedin.svg"
 import imgbehance from "./Icons/Behance.svg"
+import { NavLink } from 'react-router-dom'
      
-
-
 export const LoginSignup = () => {
 
-    function handleClick(){
-        alert("Processing");
-    }
+    // function handleClick(){
+    //     alert("Processing");
+    // }
   return (
     <div className='main-container'>
         <div className='sub-container'>
@@ -37,33 +36,34 @@ export const LoginSignup = () => {
                 </div>
                 <p className="lost-password">Forgot Password?</p>
                 <div className="sign-in-container">
-                    <button id = "sign-in-button" onClick={handleClick}>Sign in</button>
+                    <button id = "sign-in-button">Sign in</button>
                     <div className="login-container">
                         <p className="login-question">Have no account yet?</p>
-                        
-                        <a  id = "login-button" onClick={handleClick} href='#'>Sign Up</a>
-                        
+                        <NavLink to="/RegistrationForm/Register" id = "login-button">Sign up</NavLink>
+                        {/* <a  href='#'>Sign Up</a> */}
                     </div>
                 </div>
             </div>
         </div>
-        <div className="footer">
-            <p className="footer-text">
-                Алматы, Жетысу-2, дом 37, 05000
-                <br>
-                </br>
-                rajimbekerik@gmail.com
-                <br>
-                </br>
-                +7 (707) 900 50 45
-                <div className='svgs-footer'>
-                    <img className= "svgsFooter" src={imginsta}></img>
-                    <img className= "svgsFooter" src={imgwhats}></img>
-                    <img className= "svgsFooter" src={imglinkedin}></img>
-                    <img className= "svgsFooter" src={imgtg}></img>
-                    <img className= "svgsFooter" src={imgbehance}></img>
-                </div>
-            </p>
+        <div className="footer-container">
+            <div className="footer">
+                <p className="footer-text">
+                    Алматы, Жетысу-2, дом 37, 05000
+                    <br>
+                    </br>
+                    rajimbekerik@gmail.com
+                    <br>
+                    </br>
+                    +7 (707) 900 50 45
+                    <div className='svgs-footer'>
+                        <img className= "svgsFooter" src={imginsta}></img>
+                        <img className= "svgsFooter" src={imgwhats}></img>
+                        <img className= "svgsFooter" src={imglinkedin}></img>
+                        <img className= "svgsFooter" src={imgtg}></img>
+                        <img className= "svgsFooter" src={imgbehance}></img>
+                    </div>
+                </p>
+            </div>
         </div>
     </div>
   )
