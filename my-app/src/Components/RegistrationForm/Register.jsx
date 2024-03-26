@@ -7,10 +7,11 @@ import imgwhats from "./Icons/Whatsapp.svg"
 import imgtg from "./Icons/Telegram.svg"
 import imglinkedin from "./Icons/Linkedin.svg"
 import imgbehance from "./Icons/Behance.svg"
+import { NavLink } from 'react-router-dom'
 
-function handleClick(){
-    alert("Processing");
-}
+// function handleClick(){
+//     alert("Processing");
+// }
 
 function Register()
 {
@@ -27,43 +28,52 @@ function Register()
                 {/* <div className="underline"></div> */}
             </div>
             <div className="inputs">
-                <p class = "text-sign-in">Sign in</p>
+                <p class = "text-sign-in">Sign up</p>
+                <div className="input1">
+                    <input type="text" name="" id = "text-input" placeholder='Your name' />
+                </div>
+                <div className="input1">
+                    <input type="text" name="" id = "text-input" placeholder='Your surname' />
+                </div>
+                <div className="input1">
+                    <input type="text" name="" id = "text-input" placeholder='Your phone' />
+                </div>
                 <div className="input1">
                     <input type="text" name="" id = "text-input" placeholder='Your e-mail' />
                 </div>
-                <div className="input2">
+                <div className="input1">
                     <input type="text" name="" id = "text-input" placeholder='Your password' />
                 </div>
-                <p className="lost-password">Forgot Password?</p>
                 <div className="sign-in-container">
-                    <button id = "sign-in-button" onClick={handleClick}>Sign in</button>
+                    <button id = "sign-in-button">Sign up</button>
                     <div className="login-container">
-                        <p className="login-question">Have no account yet?</p>
-                        
-                        <a  id = "login-button" onClick={handleClick} href='#'>Sign Up</a>
-                        
+                        <p className="login-question">Already have an account?</p>
+                        <NavLink to="/LoginForm/LoginSignup" id = "login-button">Sign in</NavLink>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="footer">
-            <p className="footer-text">
-                Алматы, Жетысу-2, дом 37, 05000
-                <br>
-                </br>
-                rajimbekerik@gmail.com
-                <br>
-                </br>
-                +7 (707) 900 50 45
-                <div className='svgs-footer'>
-                    <img className= "svgsFooter" src={imginsta}></img>
-                    <img className= "svgsFooter" src={imgwhats}></img>
-                    <img className= "svgsFooter" src={imglinkedin}></img>
-                    <img className= "svgsFooter" src={imgtg}></img>
-                    <img className= "svgsFooter" src={imgbehance}></img>
-                </div>
-            </p>
+        <div className="footer-container">
+            <div className="footer">
+                <p className="footer-text">
+                    Алматы, Жетысу-2, дом 37, 05000
+                    <br>
+                    </br>
+                    rajimbekerik@gmail.com
+                    <br>
+                    </br>
+                    +7 (707) 900 50 45
+                    <div className='svgs-footer'>
+                        <img className= "svgsFooter" src={imginsta}></img>
+                        <img className= "svgsFooter" src={imgwhats}></img>
+                        <img className= "svgsFooter" src={imglinkedin}></img>
+                        <img className= "svgsFooter" src={imgtg}></img>
+                        <img className= "svgsFooter" src={imgbehance}></img>
+                    </div>
+                </p>
+            </div>
         </div>
+        
     </div>
     )
 } 
